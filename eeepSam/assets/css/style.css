@@ -1,0 +1,128 @@
+/***** tms-navbar ***************************/
+
+.tms-rm-padding {
+    padding: 0 !important;
+}
+
+.tms-brand-logo {
+    font-weight: 900;
+    font-size: 30px;
+    color: #eeeeee;
+}
+
+.tms-rm-margin {
+    margin: 0 !important;
+}
+
+.section-padding {
+    padding-bottom: 20px;
+}
+
+.navbar-brand {
+    padding: 2px 15px;
+}
+
+.navbar.tms-navbar {
+    margin-bottom: 0px;
+    border-radius: 0;
+    border: none;
+    position: fixed;
+    top: 0;
+    padding: 0 40px;
+    background-color: #046b49;
+    box-shadow: 0px 4px 9px -1px rgba(0, 0, 0, 0.4);
+    width: 100%;
+    transition: .3s;
+}
+
+
+
+.navbar.tms-navbar .nav.navbar-nav li a.tms-scroll-nav-a-color {
+    color: #ffffff;
+}
+
+.navbar.tms-navbar .nav.navbar-nav li a.tms-scroll-nav-a-color:hover {
+    box-shadow: inset 0px -4px 0px 0px rgb(255, 136, 0);
+    color: rgb(255, 136, 0);
+}
+
+.navbar.tms-navbar .nav.navbar-nav li a.active.tms-scroll-nav-a-color {
+    box-shadow: inset 0px -4px 0px 0px rgb(255, 136, 0);
+    color: rgb(255, 136, 0);
+}
+
+.nav-temp {
+    box-shadow: inset 0px -4px 0px 0px #0092CA;
+    color: #0092CA;
+}
+
+.navbar.tms-navbar .nav.navbar-nav li a.active {
+    box-shadow: inset 0px -4px 0px 0px #eeeeee;
+    background-color: transparent;
+    color: #eeeeee;
+}
+
+.navbar.tms-navbar .nav.navbar-nav li a {
+    text-align: center;
+    margin: 0 5px;
+    font-family: 'Lato', sans-serif;
+    color: #eeeeee;
+    font-size: 15px;
+    font-weight: 600;
+    padding: 20px 0;
+}
+
+.navbar.tms-navbar .nav.navbar-nav li:hover a {
+    transition: .5s;
+    box-shadow: inset 0px -4px 0px 0px #eeeeee;
+    background-color: transparent;
+}
+
+.navbar-brand .tms-logo-img {
+    max-width: 38px;
+}
+
+.tms-toggle-btn {
+    background-color: rgb(0, 141, 87);
+}
+
+.navbar-toggle .icon-bar {
+    background-color: #eee;
+}
+
+.navbar-fixed-top .navbar-collapse {
+    max-height: inherit;
+}
+
+.nav.navbar-nav li {
+    padding: 0 10px;
+}
+
+.navbar-collapse .tms-collapse {
+    margin-top: 10px;
+}
+
+.tms-nav>li>a:focus,
+.tms-nav>li>a:hover {
+    background-color: transparent;
+}
+
+/*******tms-navbar over ******************************/
+
+/***********header Section***********/
+
+.header {
+    max-width: 100%;
+    margin-top: 40px;
+}
+
+/*******header over ******************************/
+
+/*About Us*/
+#aboutUs {
+    text-align: center;
+}
+
+.illust {
+    max-width: 30%;
+}
