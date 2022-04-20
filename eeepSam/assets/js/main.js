@@ -49,41 +49,7 @@ $('.tms-navbar a[href*="#"]')
     }
   });
 
-// Change Menu Color When Scrolling....
-$(document).ready(function () {
-  var aChildren = $(".tms-navbar .tms-nav li").children(); // find the a children of the list items
-  var aArray = []; // create the empty aArray
-  for (var i = 0; i < aChildren.length; i++) {
-    var aChild = aChildren[i];
-    var ahref = $(aChild).attr('href');
-    aArray.push(ahref);
-  }
 
-  $(window).scroll(function () {
-    var windowPos = $(window).scrollTop(); // get the offset of the window from the top of page
-    var windowHeight = $(window).height(); // get the height of the window
-    var docHeight = $(document).height();
-
-    for (var i = 0; i < aArray.length; i++) {
-      var theID = aArray[i];
-      var divPos = $(theID).offset().top; // get the offset of the div from the top of page
-      var divHeight = $(theID).height(); // get the height of the div in question
-
-      if (windowPos >= divPos && windowPos < (divPos + divHeight)) {
-        $("a[href='" + theID + "']").addClass("nav-temp");
-      } else {
-        $("a[href='" + theID + "']").removeClass("nav-temp");
-      }
-    }
-    if (windowPos + windowHeight == docHeight) {
-      if (!$(".tms-navbar .tms-nav li:last-child a").hasClass("nav-temp")) {
-        var navActiveCurrent = $("nav-temp").attr("href");
-        $("a[href='" + navActiveCurrent + "']").removeClass("nav-temp");
-        $(".tms-navbar .tms-nav li:last-child a").addClass("nav-temp");
-      }
-    }
-  });
-});
 
 $(window).scroll(function () {
   if ($(window).width() > 1024) {
