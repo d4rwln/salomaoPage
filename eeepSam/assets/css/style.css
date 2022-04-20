@@ -1,6 +1,7 @@
 /***** tms-navbar ***************************/
 :root{
-    --color-ep1:rgb(0, 141, 87)
+    --color-ep1:rgb(0, 141, 87);
+    --color-ep2:rgb(29, 81, 55);
 }
 .tms-rm-padding {
     padding: 0 !important;
@@ -246,11 +247,32 @@ p {
     transition: all 0.5s;
 }
 
+
+#footer .top{
+    width: 100%;
+    background-color: var(--color-ep1);
+    padding: 8px 0px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: white;
+}
+#footer .top div{
+    text-align: center;
+    align-items: center;
+    margin: auto;
+    padding: auto;
+}
+
+
+#footer .top div div{
+    text-align: center;
+}
 #footer .bottom{
     width: 100%;
     bottom: 0px;
     padding: 8px 0px;
-    background-color: var(--color-ep1);
+    background-color: var(--color-ep2);
 }
 #footer .bottom p{
     text-align: center;
