@@ -1,5 +1,7 @@
 /***** tms-navbar ***************************/
-
+:root{
+    --color-ep1:rgb(0, 141, 87)
+}
 .tms-rm-padding {
     padding: 0 !important;
 }
@@ -242,4 +244,16 @@ p {
 .imgAtual {
     background: white;
     transition: all 0.5s;
+}
+
+#footer .bottom{
+    width: 100%;
+    bottom: 0px;
+    padding: 8px 0px;
+    background-color: var(--color-ep1);
+}
+#footer .bottom p{
+    text-align: center;
+    margin: auto;
+    color: white;
 }

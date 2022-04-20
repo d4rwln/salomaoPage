@@ -42,11 +42,11 @@
 		</div>
 		<div class="collapse navbar-right navbar-collapse tms-collapse" id="myNavbar">
 			<ul class="nav navbar-nav tms-nav">
-				<li><a href="#aboutUs">Quem Somos</a></li>
-				<li><a href="#works">Funcionamento</a></li>
-				<li><a href="#entrance">Ingresso</a></li>
-				<li><a href="#aprovated">Conquistas</a></li>
-				<li><a href="#contact">Contato</a></li>
+				<li><a href="#aboutUs" onclick="showContent('aboutUs')">Quem Somos</a></li>
+				<li><a href="#works" onclick="showContent('works')">Funcionamento</a></li>
+				<li><a href="#entrance" onclick="showContent('entrance')">Ingresso</a></li>
+				<li><a href="#aprovated" onclick="showContent('aprovated')">Conquistas</a></li>
+				<li><a href="#contact" onclick="showContent('contact')">Contato</a></li>
 
 			</ul>
 		</div>
@@ -60,8 +60,8 @@
 	<div class="clearfix"></div>
 
 	<!--Quem Somos-->
-	<div id="aboutUs"></div>
-	<div class="container">
+	<div class="container" id="aboutUs">
+		<!-- <div id="aboutUs"></div> -->
 		<h2 class="animate__animated animate__slideInRight tms-section-ttl">
 			Quem Somos?
 		</h2>
@@ -111,8 +111,8 @@
 	</div>
 
 	<!--Funcionamento-->
-	<div id="works"></div>
-	<div class="container">
+	<!-- <div id="works"></div> -->
+	<div class="container" id="works" style="display:none">
 		<h2 class="animate__animated animate__slideInRight tms-section-ttl">
 			Funcionamento
 		</h2>
@@ -162,8 +162,8 @@
 	</div>
 
 	<!--Ingresso-->
-	<div id="entrance"></div>
-	<div class="container">
+	<!-- <div id="entrance"></div> -->
+	<div class="container" id="entrance" style="display:none">
 		<h2 class="animate__animated animate__slideInRight tms-section-ttl">
 			Ingresso
 		</h2>
@@ -213,13 +213,34 @@
 	</div>
 
 	<!--Alunos Aprovados-->
-	<div id="aprovated"></div>
-	<div class="container">
+	<!-- <div id="aprovated"></div> -->
+	<div class="container" id="aprovated" style="display:none">
 		<h2 class="animate__animated animate__slideInRight tms-section-ttl">
 			Conquistas
 		</h2>
+		<div class="tms-about-deep-detail animate__animated animate__slideInUp">
+			<p>
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+				dolore magna aliqua. Lorem ipsum dolor sit amet consectetur adipiscing elit. Pulvinar etiam non quam
+				lacus
+				suspendisse. Enim diam vulputate ut pharetra sit amet aliquam id. Et netus et malesuada fames ac turpis
+				egestas maecenas. Tristique risus nec feugiat in fermentum posuere. Lobortis scelerisque fermentum dui
+				faucibus. Non enim praesent elementum facilisis leo vel. A pellentesque sit amet porttitor eget dolor
+				morbi
+				non. Enim blandit volutpat maecenas volutpat blandit aliquam etiam erat velit.
+			</p>
+		</div>
 	</div>
 
+	<div id="footer">
+		<div class="top"></div>
+		<div class="bottom">
+			<p>© Copyright 2022 - EEEP Dr. Salomão Alves de Moura. Todos os direitos reservados.</p>
+		</div>
+	</div>
+
+	<!-- Dw Script -->
+	<script type="text/javascript" src="assets/js/dscript.js"></script>
 	<!-- jQuery JS -->
 	<script type="text/javascript" src="assets/js/jquery-3.2.1.min.js"></script>
 	<!-- Bootstrap JS -->
