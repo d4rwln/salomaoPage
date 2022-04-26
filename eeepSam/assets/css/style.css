@@ -1,112 +1,148 @@
-/***** tms-navbar ***************************/
-:root{
-    --color-ep1:rgb(0, 141, 87);
-    --color-ep2:rgb(29, 81, 55);
-}
-.tms-rm-padding {
-    padding: 0 !important;
+/**nav-main**/
+* {
+    margin: 0;
+    padding: 0;
 }
 
-.tms-brand-logo {
-    font-weight: 900;
-    font-size: 30px;
-    color: #eeeeee;
+body {
+    overflow-x: hidden;
 }
 
-.tms-rm-margin {
-    margin: 0 !important;
+a {
+    color: #fff;
+    text-decoration: none;
+    transition: 0.3s;
 }
 
-.section-padding {
-    padding-bottom: 20px;
+a:hover {
+    opacity: 0.7;
+}
+
+.logo {
+    font-size: 24px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
 }
 
 .navbar-brand {
-    padding: 2px 15px;
+    font-size: 0;
 }
 
-.navbar.tms-navbar {
-    margin-bottom: 0px;
-    border-radius: 0;
-    border: none;
-    position: fixed;
-    top: 0;
-    padding: 0 40px;
-    background-color: #ffffff;
-    box-shadow: 0px 3px 7px -1px rgba(0, 0, 0, 0.4);
-    width: 100%;
-    transition: .3s;
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: #0b2017d8;
+    height: 6vh;
+    backdrop-filter: blur(8px);
 }
 
-.navbar.tms-navbar .nav.navbar-nav li a.tms-scroll-nav-a-color {
-    color: #000000;
+.nav-item a::backdrop {
+    color: orange;
 }
 
-.navbar.tms-navbar .nav.navbar-nav li a.tms-scroll-nav-a-color:hover {
-    box-shadow: inset 0px -4px 0px 0px rgb(255, 136, 0);
-    color: rgb(255, 136, 0);
+.nav-link {
+    color: #ffffff;
 }
 
-.navbar.tms-navbar .nav.navbar-nav li a.active.tms-scroll-nav-a-color {
-    box-shadow: inset 0px -4px 0px 0px rgb(255, 136, 0);
-    color: rgb(255, 136, 0);
+.nav-list {
+    list-style: none;
+    display: flex;
+    margin: 0;
 }
 
-.navbar.tms-navbar .nav.navbar-nav li a {
-    text-align: center;
-    margin: 0 5px;
+.nav-list li {
     font-family: 'Lato', sans-serif;
-    color: #000000;
-    font-size: 15px;
-    font-weight: 600;
-    padding: 20px 0;
+    letter-spacing: 1px;
+    font-size: 13px;
+    margin-left: 32px;
 }
 
-.navbar.tms-navbar .nav.navbar-nav li:hover a {
-    transition: .5s;
-    box-shadow: inset 0px -4px 0px 0px rgb(255, 136, 0);
-    background-color: transparent;
+.nav-list a:hover {
+    color: #f39200;
+    transition: 0.5s;
+    opacity: 0.7;
 }
 
-.navbar-brand .tms-logo-img {
-    max-width: 38px;
+.nav-list a:active {
+    color: #f39200
 }
 
-.tms-toggle-btn {
-    background-color: rgb(0, 141, 87);
+.mobile-menu {
+    display: none;
+    cursor: pointer;
 }
 
-.navbar-toggle .icon-bar {
-    background-color: #eee;
+.mobile-menu div {
+    width: 32px;
+    height: 2px;
+    background: #fff;
+    margin: 8px;
+    transition: 0.3s;
 }
 
-.navbar-fixed-top .navbar-collapse {
-    max-height: inherit;
+@media (max-width: 999px) {
+    body {
+        overflow-x: hidden;
+    }
+
+    .nav-list {
+        position: absolute;
+        top: 6vh;
+        right: 0;
+        width: 50vw;
+        height: 95vh;
+        background: #30423afb;
+        flex-direction: column;
+        align-items: center;
+        transform: translateX(100%);
+        transition: transform 0.3s ease-in;
+    }
+
+    .nav-list li {
+        margin-top: 35px;
+        opacity: 0;
+        margin-left: -20px;
+    }
+
+    .mobile-menu {
+        display: block;
+    }
 }
 
-.nav.navbar-nav li {
-    padding: 0 10px;
+.nav-list.active {
+    transform: translateX(0);
 }
 
-.navbar-collapse .tms-collapse {
-    margin-top: 10px;
+@keyframes navLinkFade {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
 }
 
-.tms-nav>li>a:focus,
-.tms-nav>li>a:hover {
-    background-color: transparent;
+.mobile-menu.active .line1 {
+    transform: rotate(-45deg) translate(-8px, 8px);
 }
 
-/*******tms-navbar over ******************************/
-
-/***********header Section***********/
-
-.header {
-    max-width: 100%;
-    margin-top: 40px;
+.mobile-menu.active .line2 {
+    opacity: 0;
 }
 
-/*******header over ******************************/
+.mobile-menu.active .line3 {
+    transform: rotate(45deg) translate(-5px, -7px);
+}
+
+
+/***** Carousel *****/
+.slide {
+    margin-top: 6vh;
+}
 
 /*General Sections*/
 
@@ -163,92 +199,8 @@ p {
     }
 }
 
-/* Aprovacted students Slides */
-.slides-config {
-    width: 100%;
-    height: 65%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
 
-.slide {
-    width: 640px;
-    height: 640px;
-    overflow: hidden;
-    border-radius: 15px;
-    transition: all 0.4s;
-}
-
-.slides {
-    width: 12160px;
-    height: 1280px;
-    display: flex;
-}
-
-#atual {
-    transition: all 2s;
-}
-
-.btn {
-    position: absolute;
-    color: orange;
-    padding: 10px;
-    text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    transition: 0.4s;
-    font-size: 3.0em;
-    margin-top: -5px;
-}
-
-.btn:hover {
-    transform: scale(1.5);
-
-}
-
-#voltar {
-    top: 50%;
-    left: 11%;
-}
-
-#next {
-    top: 50%;
-    right: 11%;
-}
-
-.balls {
-    position: absolute;
-    display: flex;
-    width: 640px;
-    justify-content: center;
-    margin: -45px;
-    margin-top: 530px;
-}
-
-.balls div {
-    transition: all 0.5s;
-    padding: 8px;
-    border: 3px solid white;
-    border-radius: 50%;
-
-    margin-right: 15px;
-    cursor: pointer;
-}
-
-.balls div:hover {
-    background: white;
-}
-
-.imgAtual {
-    background: white;
-    transition: all 0.5s;
-}
-
-
-#footer .top{
+#footer .top {
     width: 100%;
     background-color: var(--color-ep1);
     padding: 8px 0px;
@@ -257,7 +209,8 @@ p {
     align-items: center;
     color: white;
 }
-#footer .top div{
+
+#footer .top div {
     text-align: center;
     align-items: center;
     margin: auto;
@@ -265,16 +218,18 @@ p {
 }
 
 
-#footer .top div div{
+#footer .top div div {
     text-align: center;
 }
-#footer .bottom{
+
+#footer .bottom {
     width: 100%;
     bottom: 0px;
     padding: 8px 0px;
     background-color: var(--color-ep2);
 }
-#footer .bottom p{
+
+#footer .bottom p {
     text-align: center;
     margin: auto;
     color: white;
